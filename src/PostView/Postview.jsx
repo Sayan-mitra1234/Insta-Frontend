@@ -3,22 +3,22 @@ import './Postview.css';
 import Header from './Header';
 import Post from './Post';
 import Form from './Form';
-// import axios from 'axios';
-// const apiURL = 'https://instaclone-backend-rndh.onrender.com/post';
+ import axios from 'axios';
+ const apiURL = 'https://insta-backend-1234.onrender.com/post';
 const Postview = () => {
     let [data, setdata] = useState([])
     let [postAdded, setPostAdded] = useState(0);
     let [isForm, setForm] = useState(false);
-    // useEffect(() => {
-    //     async function fetchData() {
-    //         setdata([])
-    //         await axios.get(apiURL)
-    //             .then((data) => setdata(data.data.posts))
-    //             .catch(e => console.log(e));
+     useEffect(() => {
+         async function fetchData() {
+             setdata([])
+             await axios.get(apiURL)
+                 .then((data) => setdata(data.data.posts))
+                 .catch(e => console.log(e));
 
-    //     }
-    //     fetchData();
-    // }, [postAdded])
+         }
+         fetchData();
+     }, [postAdded])
 
     return (
         <div className="App">
