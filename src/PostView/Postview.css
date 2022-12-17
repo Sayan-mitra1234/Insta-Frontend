@@ -33,7 +33,7 @@ body {
   
   .card {
     margin: 20px 30%;
-    border: 1px solid gray;
+    border: 5px solid black;
     border-radius: 5px;
     box-shadow: 5px 5px 5px gray;
   }
