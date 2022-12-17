@@ -48,20 +48,18 @@ function Form({ setForm, postAdded }) {
         formDat.append('name', formData.name);
         formDat.append('location', formData.location);
         formDat.append('description', formData.description);
-        try {
-      if (formData) {
-        const response = await axios.post(apiURL , formDat);
-   
+         try {
+             const response = await axios.post({
+                 method: "post",
+                 url: apiURL,
+                 data: formDat,
+                 headers: { "Content-Type": "multipart/form-data" },
+             });
+             postAdded(prev => prev + 1)
+             console.log(response);
+        } catch (error) {
+            console.log(error)
         }
-      }
-    }        catch (e) {
-      console.log(e.message)
-    }
-//              postAdded(prev => prev + 1)
-//              console.log(response);
-//         } catch (error) {
-//             console.log(error)
-//         }
         
 
 
