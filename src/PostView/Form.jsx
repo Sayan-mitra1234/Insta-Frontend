@@ -67,7 +67,7 @@ function Form({ setForm, postAdded }) {
     return (
         <div className='container'>
 
-            <form className='form-container' action="/post" onSubmit={ handleSubmit } method='POST' enctype="multipart/form-data">
+            <form className='form-container' action="/post" onSubmit={ handleSubmit } method='POST' encType="multipart/form-data">
                 <h2>Let's Post </h2>
 
                 <input className='image m' type="file" onChange={ handleFile } name="image" id="image" required />
