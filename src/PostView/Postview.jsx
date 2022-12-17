@@ -12,7 +12,7 @@ const Postview = () => {
      useEffect(() => {
          async function fetchData() {
              setdata([])
-             await axios.get(apiURL)
+             await axios.post(apiURL)
                  .then((data) => setdata(data.data.posts))
                  .catch(e => console.log(e));
 
