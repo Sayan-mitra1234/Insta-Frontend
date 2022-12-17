@@ -5,7 +5,7 @@ export default function Header({ setForm }) {
         <header>
             <Link to='/'>
                 <div className="logo">
-                    <img src='https://img.icons8.com/clouds/512/instagram-new--v3.png' alt="logo" />
+                    <img src='https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png' alt="logo" />
                 </div>
             </Link>
             <div className="logo-name">
@@ -18,3 +18,4 @@ export default function Header({ setForm }) {
         </header>
     )
 }
+//https://img.icons8.com/clouds/512/instagram-new--v3.png
