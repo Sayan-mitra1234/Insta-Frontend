@@ -4,7 +4,7 @@ import Header from './Header';
 import Post from './Post';
 import Form from './Form';
  import axios from 'axios';
- const apiURL = 'https://instabackend-16xq.onrender.com/post';
+ const apiURL = 'https://instabackend-16xq.onrender.com';
 const Postview = () => {
     let [data, setdata] = useState([])
     let [postAdded, setPostAdded] = useState(0);
@@ -12,7 +12,7 @@ const Postview = () => {
      useEffect(() => {
          async function fetchData() {
              setdata([])
-             await axios.post(apiURL)
+             await axios.get(apiURL)
                  .then((data) => setdata(data.data.posts))
                  .catch(e => console.log(e));
 
