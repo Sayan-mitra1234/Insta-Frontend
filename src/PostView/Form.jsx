@@ -49,7 +49,7 @@ function Form({ setForm, postAdded }) {
         formDat.append('location', formData.location);
         formDat.append('description', formData.description);
          try {
-             const response = await axios.post({
+             const response = await axios({
                  method: "post",
                  url: apiURL,
                  data: formDat,
@@ -67,7 +67,7 @@ function Form({ setForm, postAdded }) {
     return (
         <div className='container'>
 
-            <form className='form-container'  onSubmit={ handleSubmit }  encType="multipart/form-data">
+            <form className='form-container' action="/post" onSubmit={ handleSubmit } method='POST' encType="multipart/form-data">
                 <h2>Let's Post </h2>
 
                 <input className='image m' type="file" onChange={ handleFile } name="image" id="image" required />
