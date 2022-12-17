@@ -49,14 +49,14 @@ function Form({ setForm, postAdded }) {
         formDat.append('location', formData.location);
         formDat.append('description', formData.description);
         try {
-            // const response = await axios({
-            //     method: "post",
-            //     url: apiURL,
-            //     data: formDat,
-            //     headers: { "Content-Type": "multipart/form-data" },
-            // });
-            // postAdded(prev => prev + 1)
-            // console.log(response);
+             const response = await axios({
+                 method: "post",
+                 url: apiURL,
+                 data: formDat,
+                 headers: { "Content-Type": "multipart/form-data" },
+             });
+             postAdded(prev => prev + 1)
+             console.log(response);
         } catch (error) {
             console.log(error)
         }
