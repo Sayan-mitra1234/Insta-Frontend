@@ -49,7 +49,7 @@ function Form({ setForm, postAdded }) {
         formDat.append('location', formData.location);
         formDat.append('description', formData.description);
          try {
-             const response = await axios({
+             const response = await axios.post({
                  method: "post",
                  url: apiURL,
                  data: formDat,
