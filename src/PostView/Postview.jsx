@@ -4,7 +4,7 @@ import Header from './Header';
 import Post from './Post';
 import Form from './Form';
  import axios from 'axios';
- const apiURL = 'https://back-3s26.onrender.com/getPosts';
+ const apiURL = 'https://insta-backend-x8sn.onrender.com/post';
 const Postview = () => {
     let [data, setdata] = useState([])
     let [postAdded, setPostAdded] = useState(0);
